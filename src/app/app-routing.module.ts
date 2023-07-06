@@ -19,6 +19,12 @@ const routes: Routes = [
     path: 'contact',
     component: ContactPageComponent,
   },
+  /* Esta es la manera correcta para crear carga perezosa de modulos encapsulados (no hacen exportaciones) */
+  {
+    path: 'countries',
+    loadChildren: () =>
+      import('./countries/countries.module').then((m) => m.CountriesModule),
+  },
   {
     path: '**',
     redirectTo: '',
