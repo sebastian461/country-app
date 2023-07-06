@@ -7,10 +7,10 @@ import { ContactPageComponent } from './shared/pages/contact-page/contact-page.c
 
 /* Se genera una constante de tipo Routes donde se define el path junto con el componente que debe renderizar */
 const routes: Routes = [
-  {
+  /* {
     path: '',
     component: HomePageComponent,
-  },
+  }, */
   {
     path: 'about',
     component: AboutPageComponent,
@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'countries/by-capital',
   },
 ];
 
