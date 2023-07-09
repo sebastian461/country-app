@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CountryService } from '../../services/countries.service';
-import { Country } from '../../interfaces/country';
+import { Country } from '../../interfaces/country.interface';
 
 @Component({
   selector: 'countries-by-capital-page',
