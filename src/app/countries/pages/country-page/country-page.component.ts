@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs';
   styleUrls: ['./country-page.component.css'],
 })
 export class CountryPageComponent implements OnInit {
-  public countries: Country[] = [];
+  public country?: Country;
 
   constructor(
     private countriesService: CountryService,
@@ -26,12 +26,9 @@ export class CountryPageComponent implements OnInit {
         )
       )
       .subscribe((country) => {
-        if (!country) {
-          return this.router.navigateByUrl('');
-        }
+        if (!country) return this.router.navigateByUrl('');
 
-        console.log('Se encontro el país');
-        return;
+        return (this.country = country);
       });
   }
 }
