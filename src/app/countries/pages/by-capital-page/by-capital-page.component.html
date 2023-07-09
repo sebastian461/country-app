@@ -15,7 +15,7 @@
   <div class="col">
     <!-- TableData -->
     <hr />
-    <shared-loader-spinner></shared-loader-spinner>
+    <shared-loader-spinner *ngIf="isLoading"></shared-loader-spinner>
     <countries-table [countries]="countries"></countries-table>
   </div>
 </div>
